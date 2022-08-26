@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL-Tourism</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        body{
+
+            background-image:linear-gradient(rgba(0, 30, 255, 0.123) 10%,rgba(5, 0, 0, 0)100%), url(/Pages/Images/31.jpg);
+        }
+
+        .topic{
+    
+            font-size: calc(20px + 9vw);
+            color: white;
+            text-shadow: 3px 1.5px black;
+            padding-top: calc(10px + 4vw);
+            font-family: Centaur;
+            padding-left: calc(50px + 4vw);
+            transition: .4s;
+            float: left;
+    
+        }
+        .topic:hover{
+
+transform: scale(1.15);
+transition: .5s;
+}
+
+h1 a{
+    text-decoration: none;
+    color: white;
+}
+.p1{
+
+color: rgb(255, 255, 255);
+text-shadow: 2px 1px black;
+font-size: calc(5px + 2vw);
+padding-bottom: 15px;
+padding-left: 50px;
+transition: .5s;
+}
+
+        
+        .signup{
+
+            background-color: rgba(0, 0, 2, 0.432);
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            color: white;
+            font-size:40px ;
+            text-align: center;
+            box-shadow:0 0 20px rgb(0, 30, 255) ;
+            border-radius: 20px;
+            margin: 0% auto;
+        }
+
+        .signup h1{
+
+             color: white;
+             font-size:30px ;
+             text-shadow: 3px 1.5px black;
+             margin-bottom: 25px;
+             margin-top: 10px;
+             font-family: Bahnschrift SemiBold;
+             
+        }
+        .signup p{
+            font-size:15px ;
+            padding-top: 15px;
+            margin-bottom: 10px;
+
+        }
+        .inbox{
+            width: 200px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border: 0px;
+        }
+        .btns{
+
+            position: relative;
+            border-radius:10px;
+            padding: 12px;
+            background-image:linear-gradient(rgb(7, 11, 224) 10%,rgb(24, 9, 94)100%);
+            transition: .5s;
+            background-color: transparent;
+            color: white;
+            border: 0px;
+        }
+        .btns:hover{
+            transform: scale(1.2);
+            transition: .5s;
+        }
+
+        .discipt{
+            color: white;
+            z-index: 100;
+            text-align: left;
+            font-size:20px;
+            color: white;
+            text-shadow: 3px 1.5px black;
+            font-family: Centaur;
+            position: absolute;
+            padding-right:1000px;
+        }
+
+
+    </style> 
+</head>
+<body>
+
+<div class="home">    
+
+    <div class="header">
+
+        <div class="menu">
+
+            <div id="myDIV">
+
+                <ul>
+
+                    <li class="btn active"><a href="#">Home</a></li>
+                    <li class="btn"><a href="travel_ideas.html">Travel Ideas</a></li>
+                    <li class="btn"><a href="discover_srilanka.html">Discover Sri-Lanka</a></li>
+                    <li class="btn"><a href="tradition.html">Tradition</a></li>
+                    <li class="btn"><a href="contact_us.html">Contact us</a></li> 
+
+                </ul>
+            </div>
+
+
+        </div>
+        
+    </div>
+
+</div>
+
+
+    <script src="active.js"></script>
+
+   <h1 class="topic"><a href="discover_srilanka.html">Sri Lanka<p class="p1">"Pearl of Indian Ocean"</p></a></h1>
+
+   <p class="discipt">ysergfuyerguyairygirufyiereiy6eifufghdjdihff</p>
+
+
+    <form class="signup">
+
+        <h1> Sign Up Now </h1>
+        <input type="email" name="email" class="inbox" placeholder="Enter your E-mail"><br>
+        <input type="password" name="email" class="inbox" placeholder="Enter password">
+        
+        <p><span><input type="checkbox"></span> I agreed to terms and conditions</p>
+        <button name="button" class="btns">Sign Up</button>
+
+    </form>
+
+   
+    
+   
+</body>
+</html>

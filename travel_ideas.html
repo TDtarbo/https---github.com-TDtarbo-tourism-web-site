@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL-Tourism</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
+
+  <script src="https://kit.fontawesome.com/42b0bdd93c.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+  <style>
+    .back {
+
+      background-image: linear-gradient(rgba(0, 44, 99, 0.479)20px, rgba(0, 0, 0, 0.1)100px), url(./Images/travel_ideas.jpg);
+      background-size: 1620px 800px;
+      background-repeat: no-repeat;
+      height: 1000px;
+    }
+
+    h1 {
+
+      font-size: 100px;
+      font-family: Monotype Corsiva;
+      color: white;
+      text-shadow: 4px 4px rgba(0, 0, 0, 0.726);
+      padding-right: 15px;
+      padding-left: 50px;
+    }
+
+    h4 {
+
+      font-size: 80px;
+      font-family: Monotype Corsiva;
+      transition: .5s;
+      color: white;
+      text-shadow: 4px 4px rgba(0, 0, 0, 0.726);
+      padding-right: 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+
+      margin-top: 100px;
+      padding-inline: 200px;
+      width: 300px;
+      padding-block: 15px;
+      margin-inline-start: 250px;
+      font-size: 20px;
+      margin: 50px;
+      border-radius: 5px;
+    }
+
+    .container {
+
+      box-shadow: 0 0 20px rgb(0, 30, 255);
+      margin: 50px;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 2, 0.603);
+    }
+
+    .btns {
+
+      position: relative;
+      border-radius: 10px;
+      padding: 12px;
+      background-image: linear-gradient(rgb(7, 11, 224) 10%, rgb(24, 9, 94)100%);
+      transition: .5s;
+      background-color: transparent;
+      color: white;
+      border: 0px;
+      margin-left: 20px;
+      margin-block: 15px;
+    }
+
+    .btns:hover {
+      transform: scale(1.2);
+      transition: .5s;
+      cursor: pointer;
+    }
+
+    h2 {
+
+      margin-left: 120px;
+      margin: 20px;
+      color: white;
+      font-size: 30px;
+      float: left;
+
+    }
+
+    .extend {
+
+      background-image: linear-gradient(rgb(0, 12, 65), rgb(13, 0, 77));
+      margin-top: 150px;
+      height: 1000px;
+
+    }
+
+    img {
+
+      padding-left: 50px;
+      padding-top: 50px;
+      width: 50%;
+    }
+
+    h5 {
+
+      margin-top: 50px;
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: white;
+      width: 600px;
+    }
+
+    span {
+
+      float: right;
+      width: auto;
+      font-size: 20px;
+      padding-top: 30px;
+      font-weight: bold;
+      font-family: Tempus Sans ITC;
+
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <div class="back">
+    <div class="header">
+
+      <div class="menu">
+
+        <div id="myDIV">
+
+          <ul>
+
+            <li class="btn"><a href="home.html">Home</a></li>
+            <li class="btn active"><a href="#">Travel Ideas</a></li>
+            <li class="btn"><a href="discover_srilanka.html">Discover Sri-Lanka</a></li>
+            <li class="btn"><a href="tradition.html">Tradition</a></li>
+            <li class="btn"><a href="contact_us.html">Contact us</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <h1>Create your PLAN !</h1>
+    <div class="events">
+
+      <h1></h1>
+    </div>
+
+    <div id="app">
+      <div class="container">
+        <h4>Todo List</h4>
+
+        <div v-if="!isEditing">
+          <input type="text" v-model="todo" />
+          <input type="submit" value="add" @click="storeTodo" class="btns" />
+        </div>
+        <div v-else>
+          <input type="text" v-model="todo" />
+          <input type="submit" value="update" @click="updateTodo" class="btns" />
+        </div>
+
+        <ol>
+          <li v-for="(todo, index) in todos">
+            <h2>{{todo}}</h2>
+
+            <button @click="editTodo(index, todo)" class="btns">Edit</button>
+            <button @click="deleteTodo(index)" class="btns">Delete</button>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          isEditing: false,
+          selectedIndex: null,
+          todo: "",
+          todos: [],
+        },
+
+        methods: {
+          storeTodo() {
+            this.todos.push(this.todo);
+            this.todo = "";
+          },
+
+          editTodo(index, todo) {
+            this.todo = todo;
+            this.selectedIndex = index;
+            this.isEditing = true;
+          },
+
+          updateTodo() {
+            this.todos.splice(this.selectedIndex, 1, this.todo);
+            this.isEditing = false;
+          },
+
+          deleteTodo(index) {
+            this.todos.splice(index, 1);
+          },
+        },
+      });
+    </script>
+
+    <div class="extend">
+
+      <h1>Up comming events</h1>
+
+      <img src="./Images/newyear.png" style="float: left;margin-inline-end: 50px;">
+
+      <h5>Sinhalese New Year(April) <br><span>Sinhalese New Year, generally known as Aluth Avurudda (Sinhala: අලුත්
+          අවුරුද්ද) in Sri Lanka,
+          is a Sri Lankan holiday that celebrates the traditional New Year of the Sinhalese people in Sri Lanka. It is a
+          major
+          anniversary celebrated by not only the Sinhalese people but by most Sri Lankans. The timing of the Sinhala New
+          Year
+          coincides with the new year celebrations of many traditional calendars of South and Southeast Asia. The
+          festival has
+          close semblance to the Tamil New year and other South and Southeast Asian New Years. It is a public holiday in
+          Sri Lanka.
+          It is generally celebrated on 13 April or 14 April and traditionally begins at the sighting of the new
+          moon.<br><br>
+
+          According to Sinhalese astrology, New Year begins when the sun moves from Meena Rashiya (the house of Pisces)
+          to Mesha Rashiya (the house of Aries). It also marks the end of the harvest season and of spring.</span></h5>
+    </div>
+
+    <script src="./Java script/active.js"></script>
+  </div>
+  <footer>
+
+    <div class="footer-content">
+
+      <h3>Sri-Lanka</h3>
+
+      <p>Each place, and each smile in Sri Lanka has a story to tell. We have so much to share with you,
+        so come along to our island in paradise!</p>
+
+
+      <ul class="socials">
+
+        <li> <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></i></a></li>
+        <li> <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        <li> <a href="https://www.messenger.com" target="_blank"><i class="fab fa-facebook-messenger"></i></a></li>
+        <li> <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li> <a href="https://www.blogger.com" target="_blank"><i class="fab fa-blogger"></i></i></a></li>
+
+
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>copyright @ 2021 OUSL All rights reserved</p>
+    </div>
+
+  </footer>
+
+
+
+</body>
+
+</html>

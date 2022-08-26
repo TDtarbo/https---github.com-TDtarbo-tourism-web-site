@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL-Tourism</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+
+    <script src="https://kit.fontawesome.com/42b0bdd93c.js" crossorigin="anonymous"></script>
+
+    <style>
+        .back {
+
+            background-image: linear-gradient(rgba(0, 44, 99, 0.479)20px, rgba(0, 0, 0, 0.418)100px), url(./Images/contact_us.jpg );
+            background-size: 100% 1000px;
+            background-repeat: no-repeat;
+            height: 1000px;
+        }
+
+        h1 {
+
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            font-family: Monotype Corsiva;
+        }
+
+        table {
+
+            margin-top: 80px;
+            margin-left: 33%;
+            background-color: rgba(0, 22, 49, 0.925);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgb(0, 30, 255);
+            color: white;
+            font-size: 20px;
+        }
+
+        input {
+
+            padding: 1px;
+            margin-inline: 40px;
+            margin-block: 10px;
+            float: left;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.63);
+            color: white;
+            margin-bottom: 40px;
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        input.message {
+
+            height: 100px;
+            width: 410px;
+
+        }
+
+        th {
+
+            text-align: left;
+            padding-inline: 40px;
+        }
+
+
+        textarea {
+
+            margin-left: 40px;
+            height: 200px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.63);
+            margin-block: 10px;
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+            border: 1px solid black;
+
+        }
+
+        .btns {
+
+            position: relative;
+            border-radius: 10px;
+            padding: 12px;
+            background-image: linear-gradient(rgb(7, 11, 224) 10%, rgb(24, 9, 94)100%);
+            transition: .5s;
+            background-color: transparent;
+            color: white;
+            border: 0px;
+            margin-top: 15px;
+            margin: 12px;
+            float: right;
+        }
+
+        .btns:hover {
+            transform: scale(1.2);
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        input.email {
+
+            width: 350px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="back">
+        <div class="header">
+
+            <div class="menu">
+
+                <div id="myDIV">
+
+                    <ul>
+
+                        <li class="btn"><a href="home.html">Home</a></li>
+                        <li class="btn"><a href="travel_ideas.html">Travel Ideas</a></li>
+                        <li class="btn"><a href="discover_srilanka.html">Discover Sri-Lanka</a></li>
+                        <li class="btn"><a href="tradition.html">Tradition</a></li>
+                        <li class="btn active"><a href="#">Contact us</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <h1>Feel free to contact us</h1>
+
+        <table>
+
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+
+            <tr>
+
+                <td><input type="text" id="btn1"></td>
+                <td><input type="text" id="btn2"></td>
+            </tr>
+
+            <tr>
+
+                <th colspan="2">E-mail</th>
+            </tr>
+
+            <tr>
+
+                <td colspan="2"><input type="email" class="email" id="btn3"></td>
+            </tr>
+            <tr>
+                <th>Message</th>
+            </tr>
+
+            <tr>
+
+                <td colspan="2"><textarea rows="4" cols="55" class="message" type="text" id="btn5"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button class="btns" onclick="empty(),submit()">Send</button><button class="btns"
+                        onclick="empty()">Clear</button></td>
+            </tr>
+
+        </table>
+
+        <script>
+
+            function empty() {
+
+                document.getElementById("btn1").value = "";
+                document.getElementById("btn2").value = "";
+                document.getElementById("btn3").value = "";
+                document.getElementById("btn5").value = "";
+
+
+
+            }
+
+            function submit() {
+
+                window.alert("Your message has submitted");
+            }
+
+        </script>
+
+
+
+    </div>
+
+
+
+
+    <script src="./Java script/active.js"></script>
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>Sri-Lanka</h3>
+
+            <p>Each place, and each smile in Sri Lanka has a story to tell. We have so much to share with you,
+                so come along to our island in paradise!</p>
+
+
+            <ul class="socials">
+
+                <li> <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></i></a></li>
+                <li> <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li> <a href="https://www.messenger.com" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+                </li>
+                <li> <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li> <a href="https://www.blogger.com" target="_blank"><i class="fab fa-blogger"></i></i></a></li>
+
+
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>copyright @ 2021 OUSL All rights reserved</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

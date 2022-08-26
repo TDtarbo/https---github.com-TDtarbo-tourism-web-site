@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding:0;
+    overflow-x: hidden;
+
+}
+
+
+body{
+
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    height: 100vh;
+}
+
+
+
+
+
+.header{
+    text-align: center;
+    background-image:linear-gradient(rgb(10, 80, 172),rgba(0, 0, 0, 0));
+    height: calc(60px + 3vw);
+    overflow: hidden;
+    font-family: Candara;
+    
+}
+
+
+.menu ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image:linear-gradient(45deg, transparent 05%, rgba(11, 62, 139, 0.973) 50%,transparent 95%);
+    background-image:linear-gradient(rgba(11, 62, 139, 0.575) 50%,transparent 95%);
+    font-size:calc(1px + 1vw) ;
+    width: 100%;
+}
+
+.menu ul li{
+   
+    display: inline-block;
+    top: 0;
+    padding-left:10px;
+    transition: .5s;
+    
+}
+
+.menu ul li a{
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding-inline: 40px;
+    transition: .5s;
+    
+}
+
+
+
+ .active,.btn:hover{
+    
+    background-image: linear-gradient(rgba(0, 72, 206, 0),rgba(6, 23, 53, 0.842));
+    border-radius: 5px;
+    transition: .1s;
+    transform: scale(1.2);
+    margin-inline:70px;
+    
+}
+.btn:hover{
+    
+    transform: scale(1.1);
+    z-index: 100;
+    margin-inline:10px;
+    transition: .5s;
+
+}
+
+
+.active{
+
+    
+    font-size:16px ;
+}
+.active:hover{
+
+    transform: scale(1.2);
+   margin-inline:70px;
+}
+
+
+
+

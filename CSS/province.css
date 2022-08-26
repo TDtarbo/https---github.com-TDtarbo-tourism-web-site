@@ -1,0 +1,157 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+
+}
+
+body{
+
+    
+    background-size: cover;
+}
+
+h1{
+
+    font-size: 70px;
+    padding-left: 50px;
+}
+
+img{
+
+    width: 100%;
+    height: 100%;
+}
+
+.grid-section{
+
+    display: grid;
+    width: 80%;
+    margin: 50px auto;
+    grid-template-rows: repeat(8, 160px);
+    grid-template-columns: repeat(5, 220px);
+    grid-gap: 30px;
+    padding-top: 50px;
+    padding-bottom: -80px;
+
+}
+.grid{
+
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 10px 5px 10px rgba(7, 2, 2, 0.89);
+    transition: .5s;
+}
+.grid-img{
+
+    width:100%;
+    height: 110%;
+    transition: 2s;
+}
+
+a{
+
+    color: white;
+}
+
+.grid:hover .grid-img,
+.grid:hover .grid-img2,
+.grid:hover .grid-img6{
+
+    transform:scale(1.1);
+    transition: 1s;
+    overflow: hidden;
+
+    
+}
+
+.para{
+
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.overlay1 h2,
+.overlay2 h2,
+.overlay3 h2,
+.overlay4 h2,
+.overlay5 h2,
+.overlay6 h2,
+.overlay7 h2{
+
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
+
+}
+
+.grid:hover .overlay1,
+.grid:hover .overlay2,
+.grid:hover .overlay3,
+.grid:hover .overlay4,
+.grid:hover .overlay5,
+.grid:hover .overlay6,
+.grid:hover .overlay7 {
+    
+    transition: 1s;
+    bottom:0px;
+}
+
+
+
+
+
+h1{
+
+    color:black;
+    font-family:Tempus Sans ITC;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    font-size: 90px;
+    text-align: center;
+}
+
+span{
+
+    color: rgb(18, 20, 134);
+    font-family:Ink Free;
+    letter-spacing: 0px;
+    padding-left: 10px;
+    font-style:italic;
+    text-shadow: none;
+    font-size: 90px;
+    
+}
+ .intro{
+
+    margin: 30px;
+    padding-top: 35px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Tempus Sans ITC;
+    font-weight: bold;
+ }
+
+.visit{
+
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: Ink Free;
+    font-size: 50px;
+ }
+
+ .back_btn{
+
+    padding: 15px;
+    padding-top: 15px;
+    position: fixed;
+    color: rgb(32, 0, 175);
+    font-size:40px;
+    float: left;
+
+ }
